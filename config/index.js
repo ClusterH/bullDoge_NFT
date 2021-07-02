@@ -1,0 +1,15 @@
+const IS_MAINNET = process.env.NETWORK === 'mainnet'
+
+const CHAIN_ID = IS_MAINNET ? 1 : 4;
+const CONTRACTS = IS_MAINNET
+  ? {
+    DOGEN: '0x17eb50FDD2995696eE82912a80a9766fCBb0ECcA',
+  } : {
+    DOGEN: '0x25dD97dD53f06b8a73C732FC262DB730E26862D6',
+  }
+
+export {
+  IS_MAINNET,
+  CHAIN_ID,
+  CONTRACTS
+}
